@@ -1,0 +1,23 @@
+<!ELEMENT Livepics (livepic)*>
+
+<!ELEMENT livepic (title+, date?, url?, telegram-id?)>
+<!ATTLIST livepic
+  disabled CDATA "no"
+  >
+
+  <!ELEMENT title (#PCDATA)>
+  <!ATTLIST title
+    lang CDATA "en"
+    >
+
+  <!ELEMENT date (#PCDATA)>
+
+  <!ELEMENT url (#PCDATA | article | img)*>
+    <!ELEMENT article (#PCDATA)>
+
+    <!ELEMENT img     (#PCDATA)>
+    <!ATTLIST img
+      version CDATA #IMPLIED
+      >
+
+  <!ELEMENT telegram-id (#PCDATA)>

@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<?xml-stylesheet type="text/xsl" href="livepics.xsl" ?>
+<!DOCTYPE Livepics PUBLIC "-//Diti/Fish 'n' Grubs//EN" "http://fishandgrubs.com/livepics.dtd">
+
+<Livepics>
+
+<!--
+┌───────────────────────┐
+│  HOW TO ADD LIVEPICS  │
+└───────────────────────┘
+
+Minimal example
+===============
+
+<livepic>
+  <title>My English text</title>
+  <date>2008-08-01</date>
+</livepic>
+
+Use <livepic disabled="yes"> to make your software ignore a LP.
+
+More complete example
+=====================
+
+<livepic>
+  <title lang="en">English title (explicitely told with the `lang` attribute)</title>
+  <title lang="fr">Titre français (déclaré explicitement à l’aide de l’attribut `lang`)</title>
+  <date></date>
+  <url>
+    <img>URL to a guest Livepic’s HD image, for example</img>
+    <article>http://fishandgrubs.com/404/guest-livepic-example</article>
+  </url>
+</livepic>
+
+
+Pengeek stuff
+=============
+
+With a terminal, how to populate the <telegram-id/> with a Telegram image upload?
+
+    # https://core.telegram.org/bots/api
+    export TOKEN=123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
+    curl -X POST https://api.telegram.org/bot${TOKEN}/sendPhoto -F chat_id=47349106 -F photo=@$HOME/photo.jpg
+
+
+Kraaaye!
+-->
+
+<livepic>
+  <title lang="en">It’s bath time</title>
+  <title lang="fr">C’est l’heure du bain</title>
+  <date>2013-01-27</date>
+  <url>
+    <article>http://www.titash.net/blog/titash-livepic-01/</article>
+    <img>http://www.titash.net/livepic/livepic/Titash%20001%20LivePic%202013-01-27.jpg</img>
+  </url>
+  <telegram-id>AgAD_v___6qnMRvKQCEE04f23X3_ygwAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Photoshop has stolen my soul</title>
+  <title lang="fr">Photoshop a volé mon âme</title>
+  <date>2013-02-01</date>
+  <telegram-id>AgAD_v___62nMRvKQCEEsTt-tLByKgwAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">It snowed Nutelkat</title>
+  <title lang="fr">Il a neigé du Nutelkat</title>
+  <date>2013-02-03</date>
+  <telegram-id>AgAD_v___66nMRvKQCEE_aWNW5nTZXMAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>Grrrmbl…</title>
+  <date>2013-02-15</date>
+  <telegram-id>AgAD_v___6-nMRvKQCEEk2rCn28LA2EAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Hurry up, I feel naked</title>
+  <title lang="fr">Dépèche-toi, j’me sens tout nu</title>
+  <date>2013-02-22</date>
+  <telegram-id>AgAD_v___7CnMRvKQCEEhqhCRbYo-44AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Help meee… My eraser wants to erase me!</title>
+  <title lang="fr">Aidez-moiii… ma gomme veut m’effacer !</title>
+  <date>2013-02-28</date>
+  <telegram-id>AgAD_v___7GnMRvKQCEE_1lss58BM_EAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Building a Firefox</title>
+  <title lang="fr">Fabriquons un Firefox</title>
+  <date>2013-04-04</date>
+  <telegram-id>AgAD_v___7KnMRvKQCEEOKFvwvUt6uQAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Dip! Who Framed Titash Meerkat</title>
+  <title lang="fr">Trempette ! Qui veut la peau de Titash suricate</title>
+  <date>2013-04-11</date>
+  <telegram-id>AgAD_v___7OnMRvKQCEE-cpnohIHc7kAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Don’t moooove!!!</title>
+  <title lang="fr">Ne bouge plus !!!</title>
+  <date>2013-04-21</date>
+  <telegram-id>AgAD_v___7SnMRvKQCEEOLUCgI1rlfcAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Beware of River Jaws</title>
+  <title lang="fr">Les dents de la rivière</title>
+  <date>2013-04-26</date>
+  <telegram-id>AgAD_v___7WnMRvKQCEEhUts3lZpReMAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">May 1st</title>
+  <title lang="fr">Premier mai</title>
+  <date>2013-04-30</date>
+  <telegram-id>AgAD_v___7anMRvKQCEESiWWfGrwoG0AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">WitchKraft</title>
+  <title lang="fr">Sorcellerie</title>
+  <date>2013-05-03</date>
+  <telegram-id>AgAD_v___7enMRvKQCEETJfrt7Arj7QAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Nutelkat: The Hazelnuts War</title>
+  <title lang="fr">Nutelkat : la guerre des noisettes</title>
+  <date>2013-05-09</date>
+  <telegram-id>AgAD_v___7inMRvKQCEEUY54Ul-fuq8AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Help meeeeee…</title>
+  <title lang="fr">Aidez-moooiii…</title>
+  <date>2013-05-17</date>
+  <telegram-id>AgAD_v___7mnMRvKQCEEA5FJdWhTVIwAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Good night</title>
+  <title lang="fr">Bonne nuit</title>
+  <date>2013-05-14</date><!-- 3 days earlier, but after, the previous LP -->
+  <telegram-id>AgAD_v___7qnMRvKQCEE-QuDu61MUWYAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Sniff?</title>
+  <title lang="fr">Snif ?</title>
+  <date>2013-06-02</date>
+  <telegram-id>AgAD_v___7unMRvKQCEEV3yPOS1spdEAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>Nutell’Art</title>
+  <date>2013-06-09</date>
+  <telegram-id>AgAD_v___7ynMRvKQCEEZttEVwzmDw4AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>Money money money</title>
+  <date>2013-06-28</date>
+  <telegram-id>AgAD_v___72nMRvKQCEEIwi3yKxAXuEAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">It’s not me… it’s him, over there…</title>
+  <title lang="fr">C’est pas moi… c’est lui, là-bas…</title>
+  <date>2013-07-10</date>
+  <telegram-id>AgAD_v___76nMRvKQCEE_JQUBPQLWEoAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">National day</title>
+  <title lang="fr">Fête nationale</title>
+  <date>2013-07-11</date>
+  <telegram-id>AgAD_v___7-nMRvKQCEEpwGtVJ0BchsAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">The meerkat air patrol</title>
+  <title lang="fr">La patrouille aérienne des suricates</title>
+  <date>2013-07-12</date>
+  <telegram-id>AgAD_v___8CnMRvKQCEE3QdjbfbiWzkAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Traveling</title>
+  <title lang="fr">En route</title>
+  <date>2013-08-09</date>
+  <telegram-id>AgAD_v___8GnMRvKQCEE5wwOyv0QS3cAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>Bon appétit</title>
+  <date>2013-08-18</date>
+  <telegram-id>AgAD_v___8KnMRvKQCEEU1lRI6Ypy5cAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Quiet rest</title>
+  <title lang="fr">Moment de repos</title>
+  <date>2013-08-29</date>
+  <telegram-id>AgAD_v___8OnMRvKQCEE2HXEbAhf268AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>Livepics making-of</title>
+  <date>2013-09-06</date>
+  <telegram-id>AgAD_v___8SnMRvKQCEEKP_WDtGNw04AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Happy birthday</title>
+  <title lang="fr">Joyeux anniversaire</title>
+  <date>2013-09-10</date>
+  <telegram-id>AgAD_v___8WnMRvKQCEEvCOp3bVOLXkAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">May the Force be with you</title>
+  <title lang="fr">Que la Force soit avec toi</title>
+  <date>2013-09-13</date>
+  <telegram-id>AgAD_v___8anMRvKQCEEVNLyOz2mxnwAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>The Wall</title>
+  <date>2013-09-20</date>
+  <telegram-id>AgAD_v___8enMRvKQCEE26NH2K-s8h0AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>Let’s play!</title>
+  <date>2013-09-27</date>
+  <telegram-id>AgAD_v___8inMRvKQCEEyKWgxu6jDU0AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Happy Halloween!</title>
+  <title lang="fr">Joyeux Halloween !</title>
+  <date>2013-10-30</date>
+  <telegram-id>AgAD_v___8mnMRvKQCEEbSumWauBojoAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>Exploration</title>
+  <date>2013-11-09</date>
+  <telegram-id>AgAD_v___8qnMRvKQCEEeua3DE_s9pYAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>Lyon lion</title>
+  <date>2013-11-14</date>
+  <telegram-id>AgAD_v___8unMRvKQCEE31x38JiqtQsAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Ski rider</title>
+  <title lang="fr">Skieur</title>
+  <date>2013-11-22</date>
+  <telegram-id>AgAD_v___8ynMRvKQCEEfkNMrB5-vJ0AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">He really exists!!!</title>
+  <title lang="fr">Il existe vraiment !!!</title>
+  <date>2013-11-23</date>
+  <url>
+    <img version="3d-anaglyph">http://www.titash.net/blog/wp-content/uploads/2013/11/Titash-034-LivePic-2013-11-23-3D.jpg</img>
+  </url>
+  <telegram-id>AgAD_v___82nMRvKQCEE92JdzeTvvLoAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Pyromaniac</title>
+  <title lang="fr">Pyromane</title>
+  <date>2013-12-05</date>
+  <telegram-id>AgAD_v___86nMRvKQCEEgWX_ssZYe5YAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Lumignon – December 8th</title>
+  <title lang="fr">Lumignon – Lyon 8 décembre</title>
+  <date>2013-12-07</date>
+  <telegram-id>AgAD_v___8-nMRvKQCEEraO26zO7HbgAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Lightspeed Nyan Kat</title>
+  <title lang="fr">Nyan Kat vitesse lumière</title>
+  <date>2013-12-12</date>
+  <telegram-id>AgAD_v___9CnMRvKQCEEXXF29mTAM8sAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Oh! I have an idea!</title>
+  <title lang="fr">Oh ! J’ai une idée !</title>
+  <date>2013-12-19</date>
+  <telegram-id>AgAD_v___9GnMRvKQCEEdaFt2vdI2pgAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Turn on the Christmas tree lights</title>
+  <title lang="fr">Allumons le sapin de Noël</title>
+  <date>2013-12-24</date>
+  <url>
+    <img>http://www.titash.net/livepic/livepic/Titash%20039%20LivePic%202013-12-24.jpg</img>
+  </url>
+  <telegram-id>AgAD_v___9KnMRvKQCEEDCRIxP5ehDUAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>Pacification</title>
+  <date>2013-12-24</date>
+  <telegram-id>AgAD_v___9OnMRvKQCEEZtg-7CwAAWJmABQC</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Firefly</title>
+  <title lang="fr">Danse de feu</title>
+  <date>2013-12-24</date>
+  <telegram-id>AgAD_v___9SnMRvKQCEEqUV7i_XzlnMAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Cartoonist: The most dangerous job in the World</title>
+  <title lang="fr">Cartooniste : le plus dangereux métier du monde</title>
+  <date>2013-12-29</date>
+  <telegram-id>AgAD_v___9WnMRvKQCEEq78joi_18Q8AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Make a wish</title>
+  <title lang="fr">Fais un vœu</title>
+  <date>2014-01-03</date>
+  <telegram-id>AgAD_v___9anMRvKQCEEep0o2eiU-cUAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Shit!</title>
+  <title lang="fr">Crotte !</title>
+  <date>2014-01-10</date>
+  <telegram-id>AgAD_v___9enMRvKQCEEh4dreyCqkJUAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>88 mph</title>
+  <date>2014-01-17</date>
+  <telegram-id>AgAD_v___9inMRvKQCEEfIHYuxmFQtcAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Ready for the Olympics</title>
+  <title lang="fr">Prêt pour les Jeux Olympiques</title>
+  <date>2014-01-24</date>
+  <telegram-id>AgAD_v___9mnMRvKQCEESqQyDD-awEgAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Last time I help a friend…</title>
+  <title lang="fr">C’est la dernière fois que j’aide un ami…</title>
+  <date>2014-01-27</date>
+  <telegram-id>AgAD_v___9qnMRvKQCEE7m629L7B510AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Celebration</title>
+  <title lang="fr">Célébration</title>
+  <date>2014-01-31</date>
+  <telegram-id>AgAD_v___9unMRvKQCEEY_O8ZVpQcT4AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Don’t touch !!!</title>
+  <title lang="fr">Pas touche !!!</title>
+  <date>2014-02-21</date>
+  <telegram-id>AgAD_v___9ynMRvKQCEEuF3N65l6DQ0AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Ze Titash Paradox</title>
+  <title lang="fr">Ze Titash Paradoxe</title>
+  <date>2014-02-28</date>
+  <telegram-id>AgAD_v___92nMRvKQCEE2gL9yDqzP4IAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en"><![CDATA[Burrows & Dragons]]></title>
+  <title lang="fr"><![CDATA[Terriers & Dragons]]></title>
+  <date>2014-03-27</date>
+  <telegram-id>AgAD_v___96nMRvKQCEENj4f-6eOdU4AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">My May 1st wishes of happiness</title>
+  <title lang="fr">Tous mes vœux de bonheur en ce 1er mai</title>
+  <date>2014-05-01</date>
+  <telegram-id>AgAD_v___9-nMRvKQCEEwpMr2C-b_HUAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Over water</title>
+  <title lang="fr">Au fil de l’eau</title>
+  <date>2014-05-09</date>
+  <telegram-id>AgAD_v___-CnMRvKQCEEBF4QTSuF6ZIAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">In the water</title>
+  <title lang="fr">Au fond de l’eau</title>
+  <date>2014-05-16</date>
+  <telegram-id>AgAD_v___-GnMRvKQCEEQMP7vjfsGW8AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>So British</title>
+  <date>2014-05-23</date>
+  <telegram-id>AgAD_v___-KnMRvKQCEEHc30Ybil5cwAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Moment of life</title>
+  <title lang="fr">Moment de vie</title>
+  <date>2014-05-30</date>
+  <telegram-id>AgAD_v___-OnMRvKQCEEFyotEDAQwZEAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Heroes</title>
+  <title lang="fr">Héros</title>
+  <date>2014-06-06</date>
+  <telegram-id>AgAD_v___-SnMRvKQCEEzoOQlgTrOYoAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Titash’s origami cruise line</title>
+  <title lang="fr">Les croisières Titash Origami</title>
+  <date>2014-06-13</date>
+  <telegram-id>AgAD_v___-WnMRvKQCEEGfs0lUgGeLcAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Meerkat Circus</title>
+  <title lang="fr">Le suricate fait son cirque</title>
+  <date>2014-06-20</date>
+  <telegram-id>AgAD_v___-anMRvKQCEEe0JTSlesSKgAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Haircut</title>
+  <title lang="fr">Nouvelle coupe</title>
+  <date>2014-06-29</date>
+  <telegram-id>AgAD_v___-enMRvKQCEEsrLavKQi9G8AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Back from the supermeerkat</title>
+  <title lang="fr">De retour du supermarché</title>
+  <date>2014-07-04</date>
+  <telegram-id>AgAD_v___-inMRvKQCEEL7QhK5wuy4QAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Meerkat in the rain</title>
+  <title lang="fr">Aujourd’hui il pleut</title>
+  <date>2014-07-11</date>
+  <telegram-id>AgAD_v___-mnMRvKQCEEIVBWhJ3v0TUAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Poo poo pooooo</title>
+  <title lang="fr">Caca boudin !</title>
+  <date>2014-07-18</date>
+  <telegram-id>AgAD_v___-qnMRvKQCEEv9q8P2sXKAAVAg</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">July 25th: Merry summer Xmas</title>
+  <title lang="fr">25 juillet : joyeux Noël d’été</title>
+  <date>2014-07-25</date>
+  <telegram-id>AgAD_v___-unMRvKQCEE91wRT6o_GjoAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Save my home…</title>
+  <title lang="fr">Sauve ma maison…</title>
+  <date>2014-08-01</date>
+  <telegram-id>AgAD_v___-ynMRvKQCEEd6ksrlqsZH0AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">My annual bath</title>
+  <title lang="fr">Mon bain annuel</title>
+  <date>2014-08-10</date>
+  <telegram-id>AgAD_v___-2nMRvKQCEEAAGtkePb9KnFABQC</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Superpower</title>
+  <title lang="fr">Super-pouvoirs</title>
+  <date>2014-08-15</date>
+  <telegram-id>AgAD_v___-6nMRvKQCEEGN7TZ3LbeNEAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">My Rover on Mars</title>
+  <title lang="fr">Mon Rover sur Mars</title>
+  <date>2014-09-05</date>
+  <telegram-id>AgAD_v___--nMRvKQCEEaXyooTfK-mwAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>Surprise (1/2)</title>
+  <date>2014-09-10</date>
+  <telegram-id>AgAD_v____CnMRvKQCEEajisP4u_bf0AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>Surprise (2/2)</title>
+  <date>2014-09-12</date>
+  <telegram-id>AgAD_v____GnMRvKQCEEMzAHY2sXRzEAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">My dragon costume</title>
+  <title lang="fr">Mon costume de dragon</title>
+  <date>2014-09-19</date>
+  <telegram-id>AgAD_v____KnMRvKQCEELNPp4Kiia_0AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Campfire</title>
+  <title lang="fr">Feu de camp</title>
+  <date>2014-09-26</date>
+  <telegram-id>AgAD_v____OnMRvKQCEEQvGhA-V2zKoAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">The summer twilight on the channels</title>
+  <title lang="fr">Au crépuscule de l’été sur les canaux</title>
+  <date>2014-11-28</date>
+  <telegram-id>AgAD_v____SnMRvKQCEEEeZndOnn2KQAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">The day the world collapsed</title>
+  <title lang="fr">Le jour où le monde s’est effondré</title>
+  <date>2014-12-05</date>
+  <telegram-id>AgAD_v____WnMRvKQCEEXyEOzZXhHvYAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Lyon, December 8th: Night of lumignons</title>
+  <title lang="fr">Un 8 décembre à Lyon : la nuit des lumignons</title>
+  <date>2014-12-08</date>
+  <telegram-id>AgAD_v____anMRvKQCEExiJLR001X_IAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Lyon, December 8th: Light the city</title>
+  <title lang="fr">Un 8 décembre à Lyon : lumières sur la ville</title>
+  <date>2014-12-08</date>
+  <telegram-id>AgAD_v____enMRvKQCEENZh1RLrf9vIAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Lightspeed</title>
+  <title lang="fr">Vitesse lumière</title>
+  <date>2014-12-12</date>
+  <telegram-id>AgAD_v____inMRvKQCEENVLAO04_NkoAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Fishing</title>
+  <title lang="fr">Partie de pêche</title>
+  <date>2014-12-19</date>
+  <telegram-id>AgAD_v____mnMRvKQCEEAS6soUADlFEAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Christmas Eve</title>
+  <title lang="fr">Réveillon de Noël</title>
+  <date>2014-12-24</date>
+  <telegram-id>AgAD_v____qnMRvKQCEE1pFk91ddLOgAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Happy New Year 2015</title>
+  <title lang="fr">Bonne année 2015</title>
+  <date>2015-01-01</date>
+  <telegram-id>AgAD_v____unMRvKQCEE5aQxjbnkxJkAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Liberty</title>
+  <title lang="fr">Liberté</title>
+  <date>2015-01-09</date>
+  <telegram-id>AgAD_v____ynMRvKQCEE2R8VgnNORNIAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Playground</title>
+  <title lang="fr">Récréation</title>
+  <date>2015-01-16</date>
+  <telegram-id>AgAD_v____2nMRvKQCEEjFiEe3mUc7UAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Oops… I’m sorry</title>
+  <title lang="fr">Oups… je suis désolé</title>
+  <date>2015-01-23</date>
+  <telegram-id>AgAD_v____6nMRvKQCEE_KYvc0NpOH4AFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Celebrate two years of Livepics</title>
+  <title lang="fr">Célébrons deux ans de Livepics</title>
+  <date>2015-01-27</date>
+  <telegram-id>AgAD_v____-nMRvKQCEEyN0UtgvFkXwAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Beware of River Jaws 2: What the Croc</title>
+  <title lang="fr">Les Dents de la rivière 2 : What the Croc</title>
+  <date>2015-03-13</date>
+  <telegram-id>AgAD_v___wABqDEbykAhBJ8jOZM7qTbyABQC</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">What a cold winter day (1/2)</title>
+  <title lang="fr">Quelle froide journée d'hiver (1/2)</title>
+  <date>2015-03-23</date>
+  <telegram-id>AgAD_v___wGoMRvKQCEEIp3xgxnqOAgAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">What a cold winter day (2/2)</title>
+  <title lang="fr">Quelle froide journée d'hiver (2/2)</title>
+  <date>2015-03-23</date>
+  <telegram-id>AgAD_v___wKoMRvKQCEEzU9-VtqUvakAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Welcome to Amerikat</title>
+  <title lang="fr">Welcome to Amérikate</title>
+  <date>2015-04-03</date>
+  <telegram-id>AgAD_v___wOoMRvKQCEEWnVaR0Y_WcoAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>Bowling</title>
+  <date>2015-04-04</date>
+  <telegram-id>AgAD_v___wSoMRvKQCEEzWsTjmKxneQAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">An American Trip</title>
+  <title lang="fr">Aventures en Amérique</title>
+  <date>2015-04-05</date>
+  <telegram-id>AgAD_v___wWoMRvKQCEEQfTjD05uVPwAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">Terror on the lake</title>
+  <title lang="fr">Terreur sur le lac</title>
+  <date>2015-04-24</date>
+  <telegram-id>AgAD_v___waoMRvKQCEEUSn5dLWR4GYAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">How to ruin a year of happiness</title>
+  <title lang="fr">Fais péter l’bonheur</title>
+  <date>2015-05-01</date>
+  <telegram-id>AgAD_v___weoMRvKQCEEB3koSAZLipkAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>JetKat</title>
+  <date>2015-05-15</date>
+  <telegram-id>AgAD_v___wioMRvKQCEEXHVmY8LxTnEAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">The aqueduct for the Emperor's Nutelkat</title>
+  <title lang="fr">L’aqueduc à Nutella de l’Empereur</title>
+  <date>2015-05-22</date>
+  <telegram-id>AgAD_v___wmoMRvKQCEEvq8yY4Sb0bEAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title>Marguerite</title>
+  <date>2015-06-12</date>
+  <telegram-id>AgAD_v___wqoMRvKQCEEMhkCK2eFaMwAFAI</telegram-id>
+</livepic>
+
+<livepic>
+  <title lang="en">At Futerkon 2015</title>
+  <title lang="fr">À Futerkon 2015</title>
+  <date>2015-08-14</date>
+</livepic>
+
+<livepic>
+  <title lang="en">Visiting Warsaw with Rita</title>
+  <title lang="fr">Visite de Varsovie avec Rita</title>
+  <date>2015-08-21</date>
+</livepic>
+
+<livepic>
+  <title lang="en">The genie of the (desk) lamp</title>
+  <title lang="fr">Le génie de la lampe (de bureau)</title>
+  <date>2015-08-28</date>
+</livepic>
+
+<livepic>
+  <title>Pucky</title>
+  <date>2015-09-04</date>
+</livepic>
+
+<livepic>
+  <title>Titash</title>
+  <date>2015-09-10</date>
+</livepic>
+
+<livepic>
+  <title lang="en">What is happening ?!!</title>
+  <title lang="fr">Qu’est-ce qu’il se passe ?!!</title>
+  <date>2015-09-18</date>
+</livepic>
+
+<livepic>
+  <title lang="en">Autumn is coming</title>
+  <title lang="fr">Quand tombe l’automne</title>
+  <date>2015-09-25</date>
+</livepic>
+
+<livepic>
+  <title><![CDATA[<3]]></title>
+  <date>2015-11-20</date>
+</livepic>
+
+
+</Livepics>

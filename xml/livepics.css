@@ -1,0 +1,58 @@
+@import(http://www.titash.net/livepic/fonts/stylesheet.css);
+
+body {
+  margin: 0;
+  color: #000;
+  background: #d4cfcb url(http://www.titash.net/livepic/graphics/bg.jpg) top center/100% no-repeat;
+}
+
+a:link    { color: #00F; }
+a:visited { color: #900; }
+a:hover   { color: #06f; }
+a:active  { color: #f60; }
+
+.head-presentation {
+  width: 60%;
+  max-width: 680px;
+  margin: auto auto;
+  text-align: center;
+}
+.head-presentation { text-align: center; }
+.head-presentation a, p, h2 { color: #000; text-decoration: none; }
+.head-presentation a:hover { color: #680f00; }
+
+.gallery {
+  max-width: 1010px;
+  margin: auto auto;
+  padding: 0;
+  text-align: center;
+}
+.gallery-item, .gallery-item img { width: 225px; }
+.gallery-item {
+  display: inline-block;
+  margin: 10px 6px;
+  padding: 6px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px #948d87;
+  text-align: left;
+  background: #f3f3f3;
+}
+.gallery-item-bloglink {
+  display: inline-block;
+  width: 100%;
+  margin-top: 2px;
+  padding-top: 3px;
+  color: #817c77 !important;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+.gallery-item-bloglink:hover { color: #453d37 !important; }
+.gallery-item-bloglink_date {
+  margin-top: 1px;
+  float: right;
+  vertical-align: baseline;
+  color: #aaa29b;
+  font-size: 12px;
+}
+@media screen and (max-width: 559px) { .gallery-item-bloglink_date { display: none; } }

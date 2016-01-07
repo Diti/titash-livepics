@@ -1,0 +1,26 @@
+<?php
+// FIXME : <figcaption id="gallery-item-bloglink"> → j’ai utilisé `id` parce que c’est dans ton CSS, mais ça devrait être une `class`, parce que ça apparaît plein de fois dans la page.
+const TITASH_LP_URL = 'http://www.titash.net/livepic';
+$lpNumTotal = count($this->livepics);
+?>
+
+<div class="gallery-list">
+<?php foreach($this->livepics as $lp):
+    $lpNum = $lpNumTotal - $lpPos++; // Numéro de la Livepic (la 1ère étant à la fin)
+    $lpTitle = htmlspecialchars($lp->title); // Appeler htmlspecialchars à cause des caractères < ou & qui seraient interprétés comme HTML
+?>
+
+  <figure class="gallery-item gallery-item-bloglink_img">
+      <a href="<?= TITASH_LP_URL ?>/livepic/Titash%20<?= sprintf('%03d', $lpNum) ?>%20LivePic%20<?= $lp->date ?>.jpg" date-imagelightbox="pic" title="Livepic <?= $lpNum ?>">
+          <img alt="<?= $lpTitle ?>" src="<?= TITASH_LP_URL ?>/preview/Titash%20<?= sprintf('%03d', $lpNum) ?>%20LivePic%20<?= $lp->date ?>.jpg">
+      </a>
+      <figcaption id="gallery-item-bloglink">
+          <a href="http://www.titash.net/blog/titash-livepic-<?= $lpNum ?>/">
+              Livepic <?= $lpNum ?>
+              <span class="gallery-item-bloglink_date"><?= $lp->date ?></span>
+          </a>
+      </figcaption>
+  </figure>
+
+<?php endforeach; ?>
+</div>
