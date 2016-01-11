@@ -48,7 +48,7 @@ try {
 <header>
   <div class="head-presentation">
     <div class="head-presentation_text">
-      <h2 class="head-presentation_title">Titash Livepics</h2>
+      <div><h2 class="head-presentation_title">Titash Livepics</h2></div>
       The life of a drawn character is not always as flat as a sheet of paper. Follow Titash and his friends for a great adventure to explore the real world.<span class="tashbar-nav-content-menu_hidetext"> A new LivePic, every Friday on <a href="https://twitter.com/TitashMeerkat" title="Titash on Twitter @TitashMeerkat (EN)" target="_blank">Twitter</a>, <a href="http://titash.tumblr.com/" title="Titash on Tumblr" target="_blank">Tumblr</a> and <a href="https://plus.google.com/+TitashCreations" title="Titash on Google+" target="_blank">Google+</a>.</span>
     </div><!-- CSS/ head-presentation_text -->
   </div><!-- CSS/ head-presentation -->

@@ -64,7 +64,7 @@ $lpNumTotal = count($livepics);
       <a href="<?= $this->LP_URL ?>/livepic/Titash%20<?= sprintf('%03d', $lpNum) ?>%20LivePic%20<?= $lp->date ?>.jpg" data-imagelightbox="pic" title="Livepic <?= $lpNum ?>">
           <img alt="<?= $lpTitle ?>" src="<?= $this->LP_URL ?>/preview/Titash%20<?= sprintf('%03d', $lpNum) ?>%20LivePic%20<?= $lp->date ?>.jpg">
       </a>
-      <figcaption id="gallery-item-bloglink">
+      <figcaption class="gallery-item-bloglink">
           <a href="http://www.titash.net/blog/titash-livepic-<?= $lpNum ?>/">
               Livepic <?= $lpNum ?>
               <span class="gallery-item-bloglink_date"><?= $lp->date ?></span>
