@@ -20,7 +20,7 @@ class LPTemplate
         }
     }
 
-    public function & __set($name, $value)
+    public function __set($name, $value)
     {
         $this->_vars[$name] = &$value;
     }
