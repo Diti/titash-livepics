@@ -45,6 +45,7 @@ try {
 ?>
 
 <!-- Gallery -->
+<section>
 <header>
   <div class="head-presentation">
     <div class="head-presentation_text">
@@ -54,7 +55,6 @@ try {
   </div><!-- CSS/ head-presentation -->
 </header>
 
-<section>
   <div class="gallery">
 
     <?php
