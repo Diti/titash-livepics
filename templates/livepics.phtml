@@ -58,6 +58,10 @@ $lpNumTotal = count($livepics);
     $lpPos++;
     $lpNum = ($currentSort == SORT_ORDER_DESC) ? $lpNumTotal - $lpPos + 1: $lpPos; // Numéro de la Livepic
     $lpTitle = htmlspecialchars($lp->title); // Appeler htmlspecialchars à cause des caractères < ou & qui seraient interprétés comme HTML
+
+    if ($lp->attributes()->disabled == "yes") {
+      continue; // On saute chaque <livepic disabled="yes">
+    }
 ?>
 
   <figure class="gallery-item gallery-item-bloglink_img">
