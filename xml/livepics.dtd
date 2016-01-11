@@ -1,6 +1,6 @@
 <!ELEMENT Livepics (livepic)*>
 
-<!ELEMENT livepic (title+, date?, url?, telegram-id?)>
+<!ELEMENT livepic (title+, date?, custom?, telegram-id?)>
 <!ATTLIST livepic
   disabled CDATA "no"
   >
@@ -12,12 +12,12 @@
 
   <!ELEMENT date (#PCDATA)>
 
-  <!ELEMENT url (#PCDATA | article | img)*>
+  <!ELEMENT custom (article?, full?, preview?)>
     <!ELEMENT article (#PCDATA)>
-
-    <!ELEMENT img     (#PCDATA)>
-    <!ATTLIST img
+    <!ELEMENT full    (#PCDATA)>
+    <!ATTLIST full
       version CDATA #IMPLIED
       >
+    <!ELEMENT preview (#PCDATA)>
 
   <!ELEMENT telegram-id (#PCDATA)>

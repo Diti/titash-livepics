@@ -40,19 +40,18 @@
                 </xsl:variable>
 
                 <xsl:variable name="img_url_full">
-                  http://www.titash.net/livepic/livepic/Titash%20<xsl:number value="$lp_number" format="001"/>%20LivePic%20<xsl:value-of select="date"/>.jpg
+                  <xsl:if test="custom and custom/full"><xsl:value-of select="custom/full"/></xsl:if>
+                  <xsl:if test="not(custom) or (custom and not(custom/full))">http://www.titash.net/livepic/livepic/Titash%20<xsl:number value="$lp_number" format="001"/>%20LivePic%20<xsl:value-of select="date"/>.jpg</xsl:if>
                 </xsl:variable>
 
                 <xsl:variable name="img_url_preview">
-                  <xsl:if test="date">
-                    http://www.titash.net/livepic/preview/Titash%20<xsl:number value="$lp_number" format="001"/>%20LivePic%20<xsl:value-of select="date"/>.jpg
-                  </xsl:if>
+                  <xsl:if test="custom and custom/preview"><xsl:value-of select="custom/preview"/></xsl:if>
+                  <xsl:if test="not(custom) or (custom and not(custom/preview))">http://www.titash.net/livepic/preview/Titash%20<xsl:number value="$lp_number" format="001"/>%20LivePic%20<xsl:value-of select="date"/>.jpg</xsl:if>
                 </xsl:variable>
 
                 <xsl:variable name="article_url">
-                  <xsl:if test="url and not(url/*)"><xsl:value-of select="url"/></xsl:if>
-                  <xsl:if test="url and url/article"><xsl:value-of select="url/article"/></xsl:if>
-                  <xsl:if test="not(url)">http://www.titash.net/blog/titash-livepic-<xsl:number value="$lp_number" format="01"/>/</xsl:if>
+                  <xsl:if test="custom and custom/article"><xsl:value-of select="custom/article"/></xsl:if>
+                  <xsl:if test="not(custom) or (custom and not(custom/article))">http://www.titash.net/blog/titash-livepic-<xsl:number value="$lp_number" format="01"/>/</xsl:if>
                 </xsl:variable>
 
                 <!-- Now output the gallery item -->

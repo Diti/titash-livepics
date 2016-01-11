@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <?xml-stylesheet type="text/xsl" href="livepics.xsl" ?>
-<!DOCTYPE Livepics PUBLIC "-//Diti/Fish 'n' Grubs//EN" "http://fishandgrubs.com/livepics.dtd">
+<!DOCTYPE Livepics PUBLIC "-//Diti/Fish 'n' Grubs//EN" "livepics.dtd">
 
 <Livepics>
 
@@ -26,10 +26,11 @@ More complete example
   <title lang="en">English title (explicitely told with the `lang` attribute)</title>
   <title lang="fr">Titre français (déclaré explicitement à l’aide de l’attribut `lang`)</title>
   <date></date>
-  <url>
-    <img>URL to a guest Livepic’s HD image, for example</img>
+  <custom>
     <article>http://fishandgrubs.com/404/guest-livepic-example</article>
-  </url>
+    <full>URL to a guest Livepic’s HD image, for example</full>
+    <preview>URL to the guest LP’s preview</preview>
+  </custom>
 </livepic>
 
 
@@ -514,9 +515,9 @@ Kraaaye!
   <title lang="en">He really exists!!!</title>
   <title lang="fr">Il existe vraiment !!!</title>
   <date>2013-11-23</date>
-  <url>
-    <img version="3d-anaglyph">http://www.titash.net/blog/wp-content/uploads/2013/11/Titash-034-LivePic-2013-11-23-3D.jpg</img>
-  </url>
+  <custom>
+    <full version="3d-anaglyph">http://www.titash.net/blog/wp-content/uploads/2013/11/Titash-034-LivePic-2013-11-23-3D.jpg</full>
+  </custom>
   <telegram-id>AgAD_v___82nMRvKQCEE92JdzeTvvLoAFAI</telegram-id>
 </livepic>
 
@@ -739,10 +740,6 @@ Kraaaye!
   <title lang="en">It’s bath time</title>
   <title lang="fr">C’est l’heure du bain</title>
   <date>2013-01-27</date>
-  <url>
-    <article>http://www.titash.net/blog/titash-livepic-01/</article>
-    <img>http://www.titash.net/livepic/livepic/Titash%20001%20LivePic%202013-01-27.jpg</img>
-  </url>
   <telegram-id>AgAD_v___6qnMRvKQCEE04f23X3_ygwAFAI</telegram-id>
 </livepic>
 
