@@ -1,0 +1,49 @@
+<footer>
+    <div id="footer-links"><!--<a href="#">Licence / License</a> &#8226; --><a href="http://www.titash.net/blog/mentions-legales/">Mentions Légales</a></div>
+    Tous droits réservés - All rights reserved © Copyright 2007&middot;2016 Titash (Jonathan Franczyk)
+</footer>
+
+<!-- Parallax -->
+<script type="text/javascript" src="http://www.titash.net/tsh/script/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="http://www.titash.net/tsh/scripts/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="http://www.titash.net/tsh/scripts/jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#head').parallax("center", 0.7, false);
+    })
+</script>
+
+<!-- Scrollbar -->
+<script>
+$(function() {
+
+    // grab the initial top offset of the navigation
+    var sticky_navigation_offset_top = $('#sticky_navigation').offset().top;
+    // our function that decides weather the navigation bar should have "fixed" css position or not.
+    var sticky_navigation = function(){
+        var scroll_top = $(window).scrollTop(); // our current vertical position from the top
+        // if we've scrolled more than the navigation, change its position to fixed to stick to top, otherwise change it back to relative
+        if (scroll_top > sticky_navigation_offset_top) {
+            $('#sticky_navigation').css({ 'position': 'fixed', 'top':0, 'left':0 });
+        } else {
+            $('#sticky_navigation').css({ 'position': 'relative' });
+        }
+    };
+    // run our function on load
+    sticky_navigation();
+    // and run it again every time you scroll
+    $(window).scroll(function() {
+         sticky_navigation();
+    });
+    // NOT required:
+    // for this demo disable all links that point to "#"
+    $('a[href="#"]').click(function(event){
+        event.preventDefault();
+    });
+
+});
+</script>
+
+<!-- Lightbox -->
+<script src="http://www.titash.net/tsh/script/lightbox/imagelightbox.js"></script>
+<script src="http://www.titash.net/tsh/script/lightbox/lightbox.js"></script>

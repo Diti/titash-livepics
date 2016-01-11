@@ -3,20 +3,24 @@
 // LPTemplate : système qui permet de stocker et récupérer des variables PHP facilement entre plusieurs fichiers.
 require_once 'LPTemplate.class.php';
 $t = new LPTemplate();
+$t->LP_URL = 'http://www.titash.net/livepic';
 
 // On récupère le contenu du fichier XML contenant les Livepics, et on le convertit en objet.
 $lpFile = file_get_contents('xml/livepics.xml') or exit("Cannot read livepics.xml");
-$lpXML = new SimpleXMLElement($lpFile);
-
-// On stocke toutes les <livepic> trouvées, en ordre décroissant.
-$t->livepics = array_reverse($lpXML->xpath('livepic'));
+$t->lpXML = new SimpleXMLElement($lpFile);
 
 // Plus loin dans la page, faire appel à $t->render($unFichier) permet de l’inclure et lui envoyer toutes les Livepics.
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<?php $t->render('header.phtml'); ?>
+<?php
+try {
+    $t->render('header.phtml');
+} catch (Exception $e) {
+    trigger_error("Header: " . $e->getMessage(), E_USER_WARNING);
+}
+?>
 </head>
 <body>
 
@@ -31,7 +35,14 @@ $t->livepics = array_reverse($lpXML->xpath('livepic'));
     ga('send', 'pageview');
 </script>
 
-<?php $t->render('titashbar.phtml'); ?>
+<!-- TitashBar -->
+<?php
+try {
+    $t->render('titashbar.phtml');
+} catch (Exception $e) {
+    trigger_error("TitashBar: " . $e->getMessage(), E_USER_WARNING);
+}
+?>
 
 <!-- Gallery -->
 <header>
@@ -45,9 +56,25 @@ $t->livepics = array_reverse($lpXML->xpath('livepic'));
 
 <section>
   <div class="gallery">
-    <?php $t->render('livepics.phtml'); ?>
+
+    <?php
+    try {
+        $t->render('livepics.phtml');
+    } catch (Exception $e) {
+        trigger_error("Livepics: " . $e->getMessage(), E_USER_WARNING);
+    }
+    ?>
+
   </div>
 </section>
 
+<!-- Footer -->
+<?php
+try {
+    $t->render('footer.phtml');
+} catch (Exception $e) {
+    trigger_error("Footer: " . $e->getMessage(), E_USER_WARNING);
+}
+?>
 </body>
 </html>

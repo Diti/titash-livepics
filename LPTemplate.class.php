@@ -16,7 +16,7 @@ class LPTemplate
         if (file_exists($tmpl_path)) {
             include $tmpl_path;
         } else {
-            throw new Exception("Le fichier `$tmpl_path` n’a pas pu être chargé.");
+            throw new Exception("`$tmpl_path` n’a pas été trouvé.");
         }
     }
 
