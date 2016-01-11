@@ -18,8 +18,7 @@ a:active  { color: #f60; }
   text-align: center;
 }
 .head-presentation { text-align: center; }
-.head-presentation a, p, h2 { color: #000; text-decoration: none; }
-.head-presentation a:hover { color: #680f00; }
+.head-presentation .link { font-family: "Courrier New", Courrier, monospace; }
 
 .gallery {
   max-width: 1010px;

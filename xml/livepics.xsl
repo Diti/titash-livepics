@@ -19,14 +19,15 @@
 
       <div class="head-presentation">
         <h2>Titash Livepics</h2>
-        <p>The life of a drawn character is not always as flat as a sheet of paper. Follow Titash and his friends for a great adventure to explore the real world. A new LivePic, every Friday on <a href="https://twitter.com/TitashMeerkat" title="Titash on Twitter @TitashMeerkat (EN)">Twitter</a>, <a href="http://titash.tumblr.com/" title="Titash on Tumblr">Tumblr</a> and <a href="https://plus.google.com/+TitashCreations" title="Titash on Google+">Google+</a>.</p>
+        <p>This XML file is not meant to be viewed in a browser.</p>
+        <p><a class="link" href="http://www.titash.net/livepic">http://www.titash.net/livepic</a></p>
       </div>
 
         <div class="gallery">
           <xsl:for-each select="livepic">
 
             <!-- Newest Livepic first -->
-            <xsl:sort select="position()" data-type="number" order="descending"/>
+            <xsl:sort select="position()" data-type="number" order="ascending"/>
 
             <xsl:if test="not(.[@disabled = 'yes']) and title/text() and date">
 
@@ -35,6 +36,7 @@
                 <!-- Store the current Livepic number in a variable -->
                 <xsl:variable name="lp_number">
                   <xsl:number value="last() - position() + 1" format="01" />
+                  <!-- If sort is ASC, use `last() - position() + 1`; if DESC, use `position()` -->
                 </xsl:variable>
 
                 <xsl:variable name="img_url_full">
