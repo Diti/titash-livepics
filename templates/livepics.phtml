@@ -38,8 +38,7 @@ $lpNumTotal = count($livepics);
 <form id="gallery-sorting-form" action=".">
   <p>
     <label>Showing </label>
-    <!-- <select name="sort" onchange="this.form.submit()"> -->
-    <select name="sort">
+    <select name="sort" onchange="this.form.submit()">
         <?php
         foreach($availableSortOrder as $o => $desc):
             $selected = ($currentSort == $o) ? 'selected="selected"' : '';
@@ -48,7 +47,7 @@ $lpNumTotal = count($livepics);
         ?>
     </select>
 
-    <button type="submit">Filter</button>
+    <noscript><button type="submit">Sort</button></noscript>
   </p>
 </form>
 </div>
