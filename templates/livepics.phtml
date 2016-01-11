@@ -54,6 +54,7 @@ $lpNumTotal = count($livepics);
 
 <div class="gallery-list">
 
+<?php $lpPos = 0; ?>
 <?php foreach($livepics as $lp):
     $lpPos++;
     $lpNum = ($currentSort == SORT_ORDER_DESC) ? $lpNumTotal - $lpPos + 1: $lpPos; // Numéro de la Livepic
