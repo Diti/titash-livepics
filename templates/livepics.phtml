@@ -11,6 +11,14 @@ $availableSortOrder = [
 ];
 
 /*
+ *  Personnages disponibles pour du filtrage de LP.
+ */
+$availableCharacters = [
+  'Titash',
+  'Pucky',
+];
+
+/*
  *  Méthode de classement des LP.
  *
  *  Si un ordre de classement valide est passé dans l’URL, on s’en sert.
@@ -20,6 +28,18 @@ if (isset($_GET['sort']) && in_array($_GET['sort'], array_keys($availableSortOrd
     $currentSort = $_GET['sort'];
 } else {
     $currentSort = SORT_ORDER_DESC;
+}
+
+/*
+ *  Méthode de filtrage des LP.
+ *
+ *  Si un filtre (de personnages) valide est passé dans l’URL, on s’en sert.
+ *  Sinon, on demande à afficher tous les personnages sans filtre.
+ */
+if (isset($_GET['show']) && in_array($_GET['show'], $availableCharacters)) {
+    $currentFilter = $_GET['show'];
+} else {
+    $currentFilter = 'all';
 }
 
 // On récupère le contenu du fichier XML, suivant l’ordre de tri demandé
@@ -36,19 +56,33 @@ $lpNumTotal = count($livepics);
 <!-- Sort and filter Livepics -->
 <div id="gallery-sorting">
 <form id="gallery-sorting-form" action=".">
-  <p>
-    <label>Showing </label>
+<p>
+  Showing
     <select name="sort" onchange="this.form.submit()">
-        <?php
+      <?php
         foreach($availableSortOrder as $o => $desc):
             $selected = ($currentSort == $o) ? 'selected="selected"' : '';
             echo "<option value=\"$o\" $selected>$desc</option>" . PHP_EOL;
         endforeach;
-        ?>
+      ?>
     </select>
-
     <noscript><button type="submit">Sort</button></noscript>
-  </p>
+  .
+
+  See
+    <?php
+      array_unshift($availableCharacters, 'all');
+      foreach($availableCharacters as $char):
+          $disabled = ($char == $currentFilter) ? 'disabled="disabled"' : '';
+          if ($char == 'all'):
+              echo "<button name=\"show\" value=\"all\" $disabled>everyone</button>";
+          else:
+              echo "<button name=\"show\" value=\"$char\" $disabled>$char</button>";
+          endif;
+      endforeach;
+    ?>
+  .
+</p>
 </form>
 </div>
 
