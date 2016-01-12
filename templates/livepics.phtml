@@ -97,6 +97,12 @@ $lpNumTotal = count($livepics);
     if ($lp->attributes()->{'disabled'} == "yes") {
       continue; // On saute chaque <livepic disabled="yes">
     }
+
+    if ($requestedChar != 'all') {
+      if ($lp->{'characters'}->{'own'} != $requestedChar) {
+        continue; // On saute tout perso différent de celui recherché
+      }
+    }
 ?>
 
   <figure class="gallery-item gallery-item-bloglink_img">
