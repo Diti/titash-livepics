@@ -25,27 +25,27 @@ $availableCharacters = [
  *  Sinon, on classe par ordre anti-chronologique (DESC).
  */
 if (isset($_GET['sort']) && in_array($_GET['sort'], array_keys($availableSortOrder))) {
-    $currentSort = $_GET['sort'];
+    $requestedSort = $_GET['sort'];
 } else {
-    $currentSort = SORT_ORDER_DESC;
+    $requestedSort = SORT_ORDER_DESC;
 }
 
 /*
  *  Méthode de filtrage des LP.
  *
- *  Si un filtre (de personnages) valide est passé dans l’URL, on s’en sert.
+ *  Si un filtre (de personnage) valide est passé dans l’URL, on s’en sert.
  *  Sinon, on demande à afficher tous les personnages sans filtre.
  */
 if (isset($_GET['show']) && in_array($_GET['show'], $availableCharacters)) {
-    $currentFilter = $_GET['show'];
+    $requestedChar = $_GET['show'];
 } else {
-    $currentFilter = 'all';
+    $requestedChar = 'all';
 }
 
 // On récupère le contenu du fichier XML, suivant l’ordre de tri demandé
-if ($currentSort == SORT_ORDER_ASC) {
+if ($requestedSort == SORT_ORDER_ASC) {
     $livepics = array_reverse($this->lpXML->xpath('livepic'));
-} else { // if ($currentSort == DESC)
+} else { // if ($requestedSort == DESC)
     $livepics = $this->lpXML->xpath('livepic');
 }
 
@@ -61,7 +61,7 @@ $lpNumTotal = count($livepics);
     <select name="sort" onchange="this.form.submit()">
       <?php
         foreach($availableSortOrder as $o => $desc):
-            $selected = ($currentSort == $o) ? 'selected="selected"' : '';
+            $selected = ($requestedSort == $o) ? 'selected="selected"' : '';
             echo "<option value=\"$o\" $selected>$desc</option>" . PHP_EOL;
         endforeach;
       ?>
@@ -73,7 +73,7 @@ $lpNumTotal = count($livepics);
     <?php
       array_unshift($availableCharacters, 'all');
       foreach($availableCharacters as $char):
-          $disabled = ($char == $currentFilter) ? 'disabled="disabled"' : '';
+          $disabled = ($char == $requestedChar) ? 'disabled="disabled"' : '';
           if ($char == 'all'):
               echo "<button name=\"show\" value=\"all\" $disabled>everyone</button>";
           else:
@@ -91,7 +91,7 @@ $lpNumTotal = count($livepics);
 <?php $lpPos = 0; ?>
 <?php foreach($livepics as $lp):
     $lpPos++;
-    $lpNum = ($currentSort == SORT_ORDER_DESC) ? $lpNumTotal - $lpPos + 1: $lpPos; // Numéro de la Livepic
+    $lpNum = ($requestedSort == SORT_ORDER_DESC) ? $lpNumTotal - $lpPos + 1: $lpPos; // Numéro de la Livepic
     $lpTitle = htmlspecialchars($lp->title); // Appeler htmlspecialchars à cause des caractères < ou & qui seraient interprétés comme HTML
 
     if ($lp->attributes()->{'disabled'} == "yes") {
