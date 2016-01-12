@@ -204,9 +204,16 @@ h2 {height: font-size: 60px;;}
 	margin: auto auto;
 	text-align: center;
 }
+@media screen and (min-width: 560px) {
+  #gallery-sorting { padding: 10px; }
+  #gallery-sorting p { display: inline-block; }
+  #gallery-sorting-byOrder { float: left; }
+  #gallery-sorting-byCharacter { float: right; }
+}
 .gallery-list {
-	list-style: none;
 	padding: 0;
+  clear: both;
+	list-style: none;
 }
 .gallery-item {
 	width: 225px;

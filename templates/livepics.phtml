@@ -54,9 +54,8 @@ $lpNumTotal = count($livepics);
 ?>
 
 <!-- Sort and filter Livepics -->
-<div id="gallery-sorting">
-<form id="gallery-sorting-form" action=".">
-<p>
+<form id="gallery-sorting" action=".">
+<p id="gallery-sorting-byOrder">
   Showing
     <select name="sort" onchange="this.form.submit()">
       <?php
@@ -67,8 +66,8 @@ $lpNumTotal = count($livepics);
       ?>
     </select>
     <noscript><button type="submit">Sort</button></noscript>
-  .
-
+</p>
+<p id="gallery-sorting-byCharacter">
   See
     <?php
       array_unshift($availableCharacters, 'all');
@@ -81,10 +80,8 @@ $lpNumTotal = count($livepics);
           endif;
       endforeach;
     ?>
-  .
 </p>
 </form>
-</div>
 
 <div class="gallery-list">
 
