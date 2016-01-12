@@ -95,13 +95,19 @@ $lpNumTotal = count($livepics);
     $lpTitle = htmlspecialchars($lp->title); // Appeler htmlspecialchars à cause des caractères < ou & qui seraient interprétés comme HTML
 
     if ($lp->attributes()->{'disabled'} == "yes") {
-      continue; // On saute chaque <livepic disabled="yes">
+        continue; // On saute chaque <livepic disabled="yes">
     }
 
     if ($requestedChar != 'all') {
-      if ($lp->{'characters'}->{'own'} != $requestedChar) {
-        continue; // On saute tout perso différent de celui recherché
-      }
+        $found = false;
+        foreach($lp->{'characters'}->children() as $character) {
+            if ($character == $requestedChar) {
+                $found = true;
+                break;
+            }
+        }
+        if ($found !== true) // Si le perso recherché n’a pas été trouvé, on passe à la prochaine LP
+          continue;
     }
 ?>
 
