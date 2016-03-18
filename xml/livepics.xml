@@ -40,6 +40,42 @@ Complete example
 -->
 
 <livepic>
+  <title lang="en">Yeah snow</title>
+  <title lang="fr">Ouais d’la neige</title>
+  <date>2016-03-11</date>
+  <characters>
+    <own>Titash</own>
+  </characters>
+</livepic>
+
+<livepic>
+  <title lang="en">Wake up Philae</title>
+  <title lang="fr">Réveille-toi Philae</title>
+  <date>2016-02-26</date>
+  <characters>
+    <own>Titash</own>
+  </characters>
+</livepic>
+
+<livepic>
+  <title lang="en"><![CDATA[Me & me]]></title>
+  <title lang="fr"><![CDATA[Moi & moi]]></title>
+  <date>2016-02-19</date>
+  <characters>
+    <own>Titash</own>
+  </characters>
+</livepic>
+
+<livepic>
+  <title lang="en">Year of the Monkey</title>
+  <title lang="fr">L’année du singe</title>
+  <date>2016-02-12</date>
+  <characters>
+    <own>Pucky</own>
+  </characters>
+</livepic>
+
+<livepic>
   <title><![CDATA[<3]]></title>
   <date>2015-11-20</date>
   <characters>
